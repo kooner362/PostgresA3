@@ -1,0 +1,189 @@
+\i runner.txt
+-- Loading schema and data:
+psql:schema.sql:1: NOTICE:  drop cascades to 38 other objects
+DETAIL:  drop cascades to table room
+drop cascades to table student
+drop cascades to table class
+drop cascades to type question_type
+drop cascades to type tf
+drop cascades to table question
+drop cascades to table multiple_choice_question
+drop cascades to table numeric_question
+drop cascades to table tf_question
+drop cascades to table quiz
+drop cascades to table responses
+drop cascades to view all_questions2
+drop cascades to view all_mc_count
+drop cascades to view mc_sum
+drop cascades to view all_numeric_count
+drop cascades to view numeric_sum
+drop cascades to view merged_mc
+drop cascades to view merged_numeric
+drop cascades to view tf_hint
+drop cascades to view merged_tf
+drop cascades to view higgins_students3
+drop cascades to view quiz_results3
+drop cascades to view correct_responses3
+drop cascades to view sum3
+drop cascades to view quiz_score3
+drop cascades to view higgins_students4
+drop cascades to view quiz_results4
+drop cascades to view all_questions4
+drop cascades to view answered_all4
+drop cascades to view didnt_answer4
+drop cascades to view higgins_students5
+drop cascades to view quiz_results5
+drop cascades to view correct_responses5
+drop cascades to view incorrect_responses
+drop cascades to view all_questions5
+drop cascades to view answered_all5
+drop cascades to view didnt_answer5
+drop cascades to view didnt_answer_total
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TYPE
+CREATE TYPE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+-- Query 1:
+    fullname     |     id     
+-----------------+------------
+ Lena Headey     | 0998801234
+ Peter Dinklage  | 0010784522
+ Emilia Clarke   | 0997733991
+ Kit Harrington  | 5555555555
+ Sophie Turner   | 1111111111
+ Maisie Williams | 2222222222
+(6 rows)
+
+-- Query 2:
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+ id  |                        left                        | num_hints 
+-----+----------------------------------------------------+-----------
+ 566 | The Prime Minister, Justin Trudeau, is Canadas Hea |          
+ 790 | During the War of 1812 the Americans burned down t |         0
+ 601 | During the "Quiet Revolution," Quebec experienced  |         3
+ 782 | What do you promise when you take the oath of citi |         1
+ 625 | What is the Underground Railroad?                  |         3
+(5 rows)
+
+-- Query 3:
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+    sid     |  lastname  | total_grade 
+------------+------------+-------------
+ 0998801234 | Headey     |           2
+ 0010784522 | Dinklage   |           7
+ 0997733991 | Clarke     |           5
+ 5555555555 | Harrington |           0
+ 1111111111 | Turner     |           0
+(5 rows)
+
+-- Query 4:
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+    sid     | qid |                                   question                                   
+------------+-----+------------------------------------------------------------------------------
+ 1111111111 | 566 | The Prime Minister, Justin Trudeau, is Canadas Head of State.
+ 5555555555 | 601 | During the "Quiet Revolution," Quebec experienced rapid change. In what     +
+            |     | decade did this occur? (Enter the year that began the decade, e.g., 1840.)
+ 1111111111 | 601 | During the "Quiet Revolution," Quebec experienced rapid change. In what     +
+            |     | decade did this occur? (Enter the year that began the decade, e.g., 1840.)
+ 1111111111 | 625 | What is the Underground Railroad?
+ 5555555555 | 625 | What is the Underground Railroad?
+ 1111111111 | 790 | During the War of 1812 the Americans burned down the Parliament Buildings in+
+            |     | York (now Toronto). What did the British and Canadians do in return?
+(6 rows)
+
+-- Query 5:
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+ id  | correct | incorrect | did_not_answer 
+-----+---------+-----------+----------------
+ 790 |       2 |         2 |              1
+ 625 |       2 |         1 |              2
+ 601 |       2 |         1 |              2
+(3 rows)
+
+csc343h-koonergu=> 
